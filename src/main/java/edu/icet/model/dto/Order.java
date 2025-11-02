@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @ToString
 
-public class OrderDetails {
+public class Order {
     private Long id;
     private Long customerId;
     private Double totalPrice;

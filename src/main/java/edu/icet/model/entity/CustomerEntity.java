@@ -12,13 +12,11 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 @Entity
-
-public class FoodItemEntity {
-
+public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String unitPrice;
-    private String description;
+    private String email;
+    private String password;
 }
