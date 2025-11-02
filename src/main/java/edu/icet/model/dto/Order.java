@@ -11,10 +11,8 @@ import java.time.LocalDateTime;
 @ToString
 
 public class Order {
-    private Long id;
+    private Long orderId;
     private Long customerId;
-    private Double totalPrice;
-    private LocalDateTime createTimeSpan;
-
-
+    @
+    private LocalDateTime createTime;
 }

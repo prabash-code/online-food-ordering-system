@@ -19,7 +19,11 @@ public class OrderItemEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long customerId;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="customerId")
+    private CustomerEntity customerEntity;
+
     private Double totalPrice;
     @CreatedDate
     @Column(name="create_date")

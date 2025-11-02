@@ -1,10 +1,10 @@
 package edu.icet.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+
+import java.time.LocalDateTime;
 
 @Setter
 @Getter
@@ -15,8 +15,9 @@ import lombok.*;
 public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long orderItemId;//pk
-    private Long orderDetailsId;//fk
-    private String foodItemId;
-    private Double foodItemPrice;
+    private Long orderId;
+    private Long customerId;
+    @CreatedDate
+    @Column(name="create_date")
+    private LocalDateTime createTime;
 }
