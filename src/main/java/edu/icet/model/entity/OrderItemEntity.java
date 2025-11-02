@@ -1,10 +1,9 @@
 package edu.icet.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
@@ -14,6 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @ToString
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 
 public class OrderItemEntity {
     @Id
@@ -21,6 +21,8 @@ public class OrderItemEntity {
     private Long id;
     private Long customerId;
     private Double totalPrice;
+    @CreatedDate
+    @Column(name="create_date")
     private LocalDateTime createTimeSpan;
 
 }
