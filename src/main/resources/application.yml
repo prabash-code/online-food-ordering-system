@@ -1,0 +1,10 @@
+Spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/online_food_ordering_system?createDatabaseIfNotExist=true
+    username: root
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show_sql: true
